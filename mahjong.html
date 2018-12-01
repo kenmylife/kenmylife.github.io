@@ -14,7 +14,16 @@
 
   gtag('config', 'UA-129726960-1');
 </script>
-
+<script>
+  function trackCTA(){
+	// 送出事件紀錄
+	gtag("event", "gamestart", {
+		"event_category":"CTA",
+		"event_label":"賭局確認",
+		"value": 7
+	});
+}
+    </script>  
     <style>
       .try {
         display: table-cell;
