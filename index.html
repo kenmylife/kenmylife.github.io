@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .inline {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>google map</h3>
+    <div class="inline">
+      <div class="inline" id="map" style="width:600px;height:400px"></div>
+      <button style="vertical-Align:top " onclick="go2()">go</button>
+      <label for="">請輸入地址</label><input id="input" type="text" />
+    </div>
+
+    https://developers.google.com/maps/documentation/javascript/reference/map
+    google Map 說明文件
+    <script type="text/javascript" src="index.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_vDx_BY89S_Im6FfhUmATf85MQOETe5c&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
