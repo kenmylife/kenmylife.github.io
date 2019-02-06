@@ -1,0 +1,273 @@
+#tryp1c,
+#tryp2c,
+#tryp3c,
+#tryp4c,
+#tryp5c,
+#tryp6c,
+#tryp7c,
+#tryp8c,
+#tryp9c,
+#tryp10c,
+#tryp11c,
+#tryp12c {
+  display: none;
+  text-align: center;
+  background-color: rgba(82, 83, 79, 0.795);
+  position: absolute;
+  border: 1.5px ridge rgba(224, 247, 121, 0.767);
+  top: -19px;
+  right: -10px;
+}
+#tryp1c span,
+#tryp2c span,
+#tryp3c span,
+#tryp4c span,
+#tryp5c span,
+#tryp6c span,
+#tryp7c span,
+#tryp8c span,
+#tryp9c span,
+#tryp10c span,
+#tryp11c span,
+#tryp12c span {
+  font-size: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  #tryp1c,
+  #tryp2c,
+  #tryp3c,
+  #tryp4c,
+  #tryp5c,
+  #tryp6c,
+  #tryp7c,
+  #tryp8c,
+  #tryp9c,
+  #tryp10c,
+  #tryp11c,
+  #tryp12c {
+    height: 150px;
+    width: 150px;
+  }
+  #tryp1c div span,
+  #tryp2c div span,
+  #tryp3c div span,
+  #tryp4c div span,
+  #tryp5c div span,
+  #tryp6c div span,
+  #tryp7c div span,
+  #tryp8c div span,
+  #tryp9c div span,
+  #tryp10c div span,
+  #tryp11c div span,
+  #tryp12c div span {
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  #tryp1c,
+  #tryp2c,
+  #tryp3c,
+  #tryp4c,
+  #tryp5c,
+  #tryp6c,
+  #tryp7c,
+  #tryp8c,
+  #tryp9c,
+  #tryp10c,
+  #tryp11c,
+  #tryp12c {
+    width: 110px;
+  }
+  #tryp1c button,
+  #tryp2c button,
+  #tryp3c button,
+  #tryp4c button,
+  #tryp5c button,
+  #tryp6c button,
+  #tryp7c button,
+  #tryp8c button,
+  #tryp9c button,
+  #tryp10c button,
+  #tryp11c button,
+  #tryp12c button {
+    font-size: 0.8em;
+  }
+  #tryp1c div span,
+  #tryp2c div span,
+  #tryp3c div span,
+  #tryp4c div span,
+  #tryp5c div span,
+  #tryp6c div span,
+  #tryp7c div span,
+  #tryp8c div span,
+  #tryp9c div span,
+  #tryp10c div span,
+  #tryp11c div span,
+  #tryp12c div span {
+    font-size: 2em;
+  }
+  #tryp1c hr,
+  #tryp2c hr,
+  #tryp3c hr,
+  #tryp4c hr,
+  #tryp5c hr,
+  #tryp6c hr,
+  #tryp7c hr,
+  #tryp8c hr,
+  #tryp9c hr,
+  #tryp10c hr,
+  #tryp11c hr,
+  #tryp12c hr {
+    display: none;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 800px) {
+  #tryp1c,
+  #tryp2c,
+  #tryp3c,
+  #tryp4c,
+  #tryp5c,
+  #tryp6c,
+  #tryp7c,
+  #tryp8c,
+  #tryp9c,
+  #tryp10c,
+  #tryp11c,
+  #tryp12c {
+    height: 90px;
+    width: 90px;
+  }
+  #tryp1c button,
+  #tryp2c button,
+  #tryp3c button,
+  #tryp4c button,
+  #tryp5c button,
+  #tryp6c button,
+  #tryp7c button,
+  #tryp8c button,
+  #tryp9c button,
+  #tryp10c button,
+  #tryp11c button,
+  #tryp12c button {
+    font-size: 0.65em;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  #tryp1c div span,
+  #tryp2c div span,
+  #tryp3c div span,
+  #tryp4c div span,
+  #tryp5c div span,
+  #tryp6c div span,
+  #tryp7c div span,
+  #tryp8c div span,
+  #tryp9c div span,
+  #tryp10c div span,
+  #tryp11c div span,
+  #tryp12c div span {
+    font-size: 1.6em;
+  }
+  #tryp1c hr,
+  #tryp2c hr,
+  #tryp3c hr,
+  #tryp4c hr,
+  #tryp5c hr,
+  #tryp6c hr,
+  #tryp7c hr,
+  #tryp8c hr,
+  #tryp9c hr,
+  #tryp10c hr,
+  #tryp11c hr,
+  #tryp12c hr {
+    display: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  #tryp1c,
+  #tryp2c,
+  #tryp3c,
+  #tryp4c,
+  #tryp5c,
+  #tryp6c,
+  #tryp7c,
+  #tryp8c,
+  #tryp9c,
+  #tryp10c,
+  #tryp11c,
+  #tryp12c {
+    height: 80px;
+    width: 80px;
+    right: -25px;
+  }
+  #tryp1c button,
+  #tryp2c button,
+  #tryp3c button,
+  #tryp4c button,
+  #tryp5c button,
+  #tryp6c button,
+  #tryp7c button,
+  #tryp8c button,
+  #tryp9c button,
+  #tryp10c button,
+  #tryp11c button,
+  #tryp12c button {
+    font-size: 0.5em;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  #tryp1c div span,
+  #tryp2c div span,
+  #tryp3c div span,
+  #tryp4c div span,
+  #tryp5c div span,
+  #tryp6c div span,
+  #tryp7c div span,
+  #tryp8c div span,
+  #tryp9c div span,
+  #tryp10c div span,
+  #tryp11c div span,
+  #tryp12c div span {
+    font-size: 1.55em;
+  }
+  #tryp1c hr,
+  #tryp2c hr,
+  #tryp3c hr,
+  #tryp4c hr,
+  #tryp5c hr,
+  #tryp6c hr,
+  #tryp7c hr,
+  #tryp8c hr,
+  #tryp9c hr,
+  #tryp10c hr,
+  #tryp11c hr,
+  #tryp12c hr {
+    display: none;
+  }
+}
+
+/* <div id="tryp1c">
+                  <span style="font-size:2rem"></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold">金額:</span>
+                  <input
+                    id="bet1"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span style="font-size:2.5rem">+0</span>
+                    <button
+                      onclick="disapear(1);game.p1.win(game.stake,game.p2);listMoneyOpponent();"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button id="cancel" onclick="shutDown();">取消</button>
+                  </div>
+                </div> */

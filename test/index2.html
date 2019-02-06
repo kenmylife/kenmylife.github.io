@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel=stylesheet type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC" rel="stylesheet">
+    <style>
+      /* ol {margin-left: 0; padding-left: 0;} */
+        ol{
+          margin: 0 auto;font-weight:bolder;font-size:1.5rem
+          }
+        :root {                
+               font-size: 16px;          
+              }
+        .borderSpace{
+          display:table-row;
+          border-spacing:5px 0
+        }
+        @media screen and (min-width: 550px) and (max-width: 749px) {
+          .borderSpace{
+            border-spacing: 3px 0;
+          }
+        }
+        @media screen and (max-width: 549px) {
+          .borderSpace{
+            border-spacing: 2px 0;
+        }   
+        }
+                 
+        @media screen and (max-width: 849px) {
+          :root {                
+               font-size: 12px;          
+              }
+              #wholeTable{                
+               position: absolute;
+               top: 125px;        
+              }
+        }
+        @media screen and (max-width: 625px) {
+          :root {                
+               font-size: 10px;          
+              }
+        }
+        @media screen and (min-width: 532px) and (max-width: 749px) {
+        ol{
+            font-size:1.8rem
+            }
+        }
+
+        @media screen and (max-width: 532px) {
+          :root {                
+               font-size: 8px;          
+                }
+          ol    {
+            font-size:2.1rem;
+            padding-left: 20px;
+                }   
+        }
+        @media screen and (max-width: 442px) {
+          :root {                
+               font-size: 6.5px;          
+              }         
+        }
+        #wholeTable{
+          margin:3% 0 3% 7%;
+          display:table;
+          width:86%;
+          height:650px;
+        }       
+        @media screen and (max-width: 664px) {
+          #wholeTable{                
+               margin-left: 0%;          
+              }
+        }
+        .form{
+          position: absolute;
+          left: 8%;
+          top: 0.2%;
+          font-size: 16px;
+          font-weight: 500;
+          font-family: 'Noto Serif TC', serif;
+        }
+        @media screen and (max-width: 749px) {
+          .form{ 
+                    position:absolute;
+                    top:800px;             
+               }
+        }   
+        @media screen and (min-width: 850px) {
+          header h1{
+          font-family:"微軟正黑體" ,sans-serif;
+          padding:1% 0 0 0;
+          text-align:center;
+          font-weight:bold;
+          font-size:3.5rem;
+        }
+        }
+        @media screen and (min-width: 481px) and (max-width: 849px) {
+         header h1{ 
+          font-family:"微軟正黑體" ,sans-serif;
+          padding:1% 0 0 0;
+          text-align:center;
+          font-weight:bold;     
+          font-size:4.5rem;
+        }
+        }
+        .input{
+         position:absolute;
+         top:10px;
+         right:10px;
+         border:1px solid black;
+         padding:10px;
+        }
+        @media screen and (min-width: 750px) and (max-width: 850px) {
+          .input { 
+                    position:absolute;
+                    top:10px;
+                    right:0%;
+                  }
+        }
+        @media screen and (min-width: 481px) and (max-width: 749px) {
+          .header { 
+                    position:absolute;               
+                    left:15%;
+                  }
+        }
+        @media screen and (max-width: 480px) {
+          .header { 
+                    position:absolute;               
+                    left:2.8%;
+                  }
+                  header h1{ 
+          font-family:"微軟正黑體" ,sans-serif;
+          padding:1% 0 0 0;
+          text-align:center;
+          font-weight:bold;     
+          font-size:4.5rem;
+        }
+        }
+        @media screen and (max-width: 749px) {
+          .input { 
+                    position:absolute;
+                    top:10px;
+                    right:0%;
+                  }
+        }
+        .output{
+          width:80px;
+          height:60px;
+          font-weight:650;
+          font-size:20px;
+          position:absolute;
+          top:65%;
+          right:1.6%
+          }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .output { 
+                    position:absolute;
+                    top: 155px;
+                    right:0%;
+                  }
+        }
+        @media screen and (max-width: 899px) {
+          .output { 
+                    position:absolute;
+                    top:850px;
+                    right:0px;
+                  }
+        }
+        .output button{ 
+          font-size: 130%;
+          border:2px ridge red;
+          background-color: #67cdf5;
+          border-radius: 15%;
+          opacity: 0.5;
+          font-weight: 750;
+          cursor: pointer;
+          transition: opacity 2s,background-color 0.5s;
+          }
+        .output button:hover{
+          opacity: 0.8;
+          background-color: #8d8d8d;
+          font-weight: 990;
+        }
+        .try {
+          display: table-cell;
+          width: 33%;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+          border: 2px ridge;
+          border-color: blue;
+          border-bottom: none;
+          position: relative;
+        }
+  
+        
+      </style>
+  </head>
+  <body style="background-color:rgba(160, 138, 98, 0.705);height:1000px;">
+    <div class="form">
+      <center>
+        <h3>歷史紀錄查詢</h3>
+      </center> 
+      <form action="index3.html" method="get">
+        <label for="date">遊玩日期:</label>
+        <input name="date" type="date" id="date" required>
+        <br>
+        <br>
+        <label for="p1name">玩家姓名:</label>
+        <input name="name" id="p1name" type="text" size="8" maxlength="6" required>
+        <label for="xxx">&#8194</label>
+        <button id="formsubmit" type="submit">查尋</button>
+      </form>
+    </div>
+    <header class="header">
+      <h1
+      >
+        麻將計算器
+      </h1>
+    </header>
+    <div
+      class="input"
+    >
+    
+      <label for="player_1">玩家1:</label>
+      <input
+        required
+        type="text"
+        id="player_1"
+        size="6"
+        placeholder="player1"
+        maxlength="6"
+      />
+      <label for="original">底台:</label>
+      <input type="number" id="origin" min="0" max="100" step="10" value="10" />
+      <br />
+      <label for="player_2">玩家2:</label>
+      <input
+        required
+        type="text"
+        id="player_2"
+        size="6"
+        placeholder="player2"
+        maxlength="6"
+      />
+      <label for="bet">台數:</label>
+      <input id="bet" type="number" min="0" max="100" step="10" value="10" />
+      <br />
+      <label for="player_3">玩家3:</label>
+      <input
+        required
+        type="text"
+        id="player_3"
+        size="6"
+        placeholder="player3"
+        maxlength="6"
+      />
+      <label for="">圈數:</label> <input type="text" disabled size="5" /> <br />
+      <label for="player_4">玩家4:</label>
+      <input
+        required
+        type="text"
+        id="player_4"
+        size="6"
+        placeholder="player4"
+        maxlength="6"
+      />
+      <br />
+      <center style="margin-top:5px">
+        <button type="submit" id="button" onclick="initGame();">送出</button>
+        <button type="submit" onclick="reset();">重設</button>
+      </center>
+    
+    </div>
+
+    <div
+      id="wholeTable"
+    >
+      <div class="borderSpace">
+        <div
+          style="margin-right:50px;height:50%;width:50%;display:table-cell"
+          id="P1"
+        >
+          <div style="display:table;height:100%;width:100%">
+            <div style="display:table-row;height:22%">
+              <div
+                style="display:table-cell;font-size:2.3rem;text-align:center;padding-top:10px;font-style:italic;font-weight:bold"
+              >
+                Player1:
+              </div>
+              <div
+                style="display:table-cell;font-size:3rem;text-align:center;padding-top:10px"
+                id="player1"
+              >
+                ken
+              </div>
+              <div
+                style="display:table-cell;font-size:3rem;text-align:center;padding-top:10px"
+              >
+                0
+              </div>
+            </div>
+            <div style="display:table-row;height:18%" id="other_player1">
+              <div class="try" style="border-color:blue">
+                <div style="text-align:center">
+                  <span style="width:50%;font-size:2.5rem">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem"></span>
+                </div>
+                <div id="tryp1c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet1"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(1);game.p1.win(game.stake,game.p2);listMoneyOpponent();"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button id="cancel" onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+              <div class="try" style="border-color:blue">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem ">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp2c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet2"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(2);game.p1.win(game.stake,game.p3);listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+              <div class="try" style="border-color:blue">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem ">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp3c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet3"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(3);game.p1.win(game.stake,game.p4);listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display:table-row;height:60% " id="player_list1">
+              <div
+                style="display:table-cell;border:2px ridge blue;border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                  
+                ></ol>
+              </div>
+              <div
+                style="display:table-cell;border:2px ridge blue;border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                  
+                ></ol>
+              </div>
+              <div
+                style="display:table-cell;border:2px ridge blue;border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                  
+                ></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="height:50%;width:50%;display:table-cell " id="P2">
+          <div style="display:table;height:100%;width:100% ">
+            <div style="display:table-row;height:22% ">
+              <div
+                style="display:table-cell;font-size:2.3rem;text-align:center;padding-top:10px;font-style:italic;font-weight:bold "
+              >
+                Player2:
+              </div>
+              <div
+                style="display:table-cell;font-size:3rem;text-align:center;padding-top:10px "
+                id="player2"
+              >
+                jerry
+              </div>
+              <div
+                style="display:table-cell;font-size:3rem;text-align:center;padding-top:10px "
+              >
+                0
+              </div>
+            </div>
+            <div style="display:table-row;height:18% " id="other_player2">
+              <div class="try" style="border-color: rgb(250, 246, 0)">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem ">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp4c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet4"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(4);game.p2.win(game.stake,game.p1);listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+              <div class="try" style="border-color: rgb(250, 246, 0)">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem ">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp5c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet5"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(5);game.p2.win(game.stake,game.p3);listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+              <div class="try" style="border-color: rgb(250, 246, 0)">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem ">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp6c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet6"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(6);game.p2.win(game.stake,game.p4);listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display:table-row;height:60%" id="player_list2">
+              <div
+                style="display:table-cell;border:2px ridge rgb(250, 246, 0);border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                 
+                ></ol>
+              </div>
+              <div
+                style="display:table-cell;border:2px ridge rgb(250, 246, 0);;border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                  
+                ></ol>
+              </div>
+              <div
+                style="display:table-cell;border:2px ridge rgb(250, 246, 0);;border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                  
+                ></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="borderSpace">
+        <div
+          style="margin-right:50px;height:50%;width:50%;display:table-cell "
+          id="P3 "
+        >
+          <div style="display:table;height:100%;width:100% ">
+            <div style="display:table-row;height:22% ">
+              <div
+                style="display:table-cell;font-size:2.3rem;text-align:center;padding-top:10px;font-style:italic;font-weight:bold "
+              >
+                Player3:
+              </div>
+              <div
+                style="display:table-cell;font-size:3rem;text-align:center;padding-top:10px "
+                id="player3"
+              >
+                jen
+              </div>
+              <div
+                style="display:table-cell;font-size:3rem;text-align:center;padding-top:10px "
+              >
+                0
+              </div>
+            </div>
+            <div style="display:table-row;height:18% " id="other_player3">
+              <div class="try" style="border-color: rgb(57, 238, 12)">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp7c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet7"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(7);game.p3.win(game.stake,game.p1);listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+              <div class="try" style="border-color: rgb(57, 238, 12)">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem; ">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp8c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet8"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(8);game.p3.win(game.stake,game.p2);;listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+              <div class="try" style="border-color: rgb(57, 238, 12)">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem ">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp9c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet9"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(9);game.p3.win(game.stake,game.p4);;listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display:table-row;height:60%" id="player_list3">
+              <div
+                style="display:table-cell;border:2px ridge rgb(57, 238, 12);border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                 
+                ></ol>
+              </div>
+              <div
+                style="display:table-cell;border:2px ridge rgb(57, 238, 12);border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                  
+                ></ol>
+              </div>
+              <div
+                style="display:table-cell;border:2px ridge rgb(57, 238, 12);border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                  
+                ></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="height:50%;width:50%;display:table-cell " id="P4 ">
+          <div style="display:table;height:100%;width:100% ">
+            <div style="display:table-row;height:22% ">
+              <div
+                style="display:table-cell;font-size:2.3rem;text-align:center;padding-top:10px;font-style:italic;font-weight:bold "
+              >
+                Player4:
+              </div>
+              <div
+                style="display:table-cell;font-size:3rem;text-align:center;padding-top:10px "
+                id="player4"
+              >
+                wendy
+              </div>
+              <div
+                style="display:table-cell;font-size:3rem;text-align:center;padding-top:10px "
+              >
+                0
+              </div>
+            </div>
+            <div style="display:table-row;height:18% " id="other_player4">
+              <div class="try" style="border-color: rgb(195, 13, 231)">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem ">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp10c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet10"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(10);game.p4.win(game.stake,game.p1);listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+              <div class="try" style="border-color: rgb(195, 13, 231)">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem ">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp11c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet11"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(11);game.p4.win(game.stake,game.p2);listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+              <div class="try" style="border-color: rgb(195, 13, 231)">
+                <div style="text-align:center ">
+                  <span style="width:50%;font-size:2.5rem ">Player:</span>
+                  <span style="margin-left:5%;width:50%;font-size:2rem "></span>
+                </div>
+                <div id="tryp12c">
+                  <span></span>
+                  <hr style="border-color: rgba(82, 83, 79, 0)" />
+                  <span style="font-weight:bold;font-size:1rem;">金額:</span>
+                  <input
+                    id="bet12"
+                    style="background-color:ivory;width:60%;text-align:center"
+                    max="20"
+                    min="0"
+                    step="1"
+                    size="8"
+                    type="number"
+                  />
+                  <div
+                    style="display:flex;margin:10% 0 0 0;justify-content:space-around"
+                  >
+                    <span>+0</span>
+                    <button
+                      onclick="disapear(12);game.p4.win(game.stake,game.p3);listMoneyOpponent()"
+                      type="submit"
+                    >
+                      確定
+                    </button>
+                    <button onclick="shutDown();">取消</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display:table-row;height:60%" id="player_list4">
+              <div
+                style="display:table-cell;border:2px ridge rgb(195, 13, 231);border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                  
+                ></ol>
+              </div>
+              <div
+                style="display:table-cell;border:2px ridge rgb(195, 13, 231);border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                  
+                ></ol>
+              </div>
+              <div
+                style="display:table-cell;border:2px ridge rgb(195, 13, 231);border-bottom-left-radius:3px;border-bottom-right-radius:3px "
+              >
+                <ol
+                  
+                ></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="output"
+    >
+    
+      <button type="submit" onclick="outPut();">輸出表單</button>
+  
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-database.js"></script>
+    <script type="text/javascript " src="lib.js"></script>
+    <script type="text/javascript " src="index.js?67890"></script>
+    <script type="text/javascript " src="firebase.js"></script>
+  </body>
+</html>
