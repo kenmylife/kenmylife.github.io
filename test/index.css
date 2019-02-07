@@ -17,6 +17,7 @@
   border: 1.5px ridge rgba(224, 247, 121, 0.767);
   top: -19px;
   right: -10px;
+  z-index:100;
 }
 #tryp1c span,
 #tryp2c span,
